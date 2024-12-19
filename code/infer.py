@@ -152,66 +152,51 @@ def Hit_at_k(pred, true, k):
 
 def exp_plot(data1, data2, args):
     name = args.dataset + "_"+args.type
-    # 合并数据
+    # merge
     data = np.vstack((data1, data2))
 
-    # 创建标签，data1的标签为0，data2的标签为1
+    # data1:0，data2:1
     labels = np.array([0] * len(data1) + [1] * len(data2))
 
-    # 运行UMAP降维
-    # 固定随机种子
+
+    # seed
     random_state = 42
-    # 创建UMAP实例
+    # UMAP
     reducer = umap.UMAP(random_state=random_state)
     embedding = reducer.fit_transform(data)
 
-    # 绘图
+    # plot
     plt.figure(figsize=(10, 8))
-    # 设置字体大小
     plt.rcParams.update({'font.size': 16})
-    # 绘制data1的数据
     plt.scatter(embedding[labels == 0, 0], embedding[labels == 0, 1], s=10, c='#DE582B', label='True')
-
-    # 绘制data2的数据
     plt.scatter(embedding[labels == 1, 0], embedding[labels == 1, 1], s=10, c='#1868B2', label='Pred')
-
-    # 添加标题和图例
     plt.title('EXP UMAP projection of '+ name, fontsize=20)
     plt.legend(loc='best', fontsize=16)
     plt.savefig('./figure/EXP/'+name+'.pdf', format='pdf', bbox_inches='tight')
-    # 显示图像
     # plt.show()
 
 def ebd_plot(data1, data2, args):
     name = args.dataset + "_"+args.type
-    # 合并数据
+    # merge
     data = np.vstack((data1, data2))
 
-    # 创建标签，data1的标签为0，data2的标签为1
+    # data1:0，data2:1
     labels = np.array([0] * len(data1) + [1] * len(data2))
 
-    # 运行UMAP降维
-    # 固定随机种子
+    # seed
     random_state = 42
-    # 创建UMAP实例
+    # UMAP
     reducer = umap.UMAP(random_state=random_state)
     embedding = reducer.fit_transform(data)
 
-    # 绘图
+    # plot
     plt.figure(figsize=(10, 8))
-    # 设置字体大小
     plt.rcParams.update({'font.size': 30})
-    # 绘制data1的数据
     plt.scatter(embedding[labels == 0, 0], embedding[labels == 0, 1], s=10, c='#DE582B', label='Query')
-
-    # 绘制data2的数据
     plt.scatter(embedding[labels == 1, 0], embedding[labels == 1, 1], s=10, c='#1868B2', label='Reference')
-
-    # 添加标题和图例
     plt.title('Embedding of '+ name, fontsize=24)
-    plt.legend(loc='best', fontsize=30, framealpha=0.5)  # 增大图例字体
+    plt.legend(loc='best', fontsize=30, framealpha=0.5) 
     plt.savefig('./figure/EBD/'+name+'.pdf', format='pdf', bbox_inches='tight')
-    # 显示图像
     # plt.show()
 
 
