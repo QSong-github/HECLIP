@@ -1,0 +1,13 @@
+#!/bin/bash
+#SBATCH --job-name=<uce-ft>
+#SBATCH --mail-user=<wang.qing@ufl.edu>
+#SBATCH --mail-type=FAIL,END
+#SBATCH --output <my_job-%j.out>
+#SBATCH --time=240:00:00
+#SBATCH --partition=hpg-ai
+#SBATCH --gpus=a100:1
+#SBATCH --cpus-per-task=8
+#SBATCH --ntasks=1
+#SBATCH --mem=120gb
+
+python main.py
