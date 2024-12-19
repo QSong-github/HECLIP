@@ -119,7 +119,6 @@ for i in range(len(filtered_mtx)):
 
 
 
-# 检查并输出各个数组的形状
 d = np.load("../GSE245620/data/filtered_expression_matrices/1/hvg_matrix.npy")
 print(d.shape, np.isnan(d).any())
 
@@ -137,13 +136,12 @@ d = np.concatenate((d.T, d2.T, d3.T, d4.T), axis = 0)
 
 
 
-# 准备相关数据及运行 Harmony
 data_sizes = [4992, 4992, 4992, 4991]
 batch_labels = np.concatenate((np.zeros(4992), np.ones(4992), np.ones(4992)*2, np.ones(4991)*3))
 batch_labels = batch_labels.astype(str)
 df = pd.DataFrame(batch_labels, columns=["dataset"])
 
-# 进行 Harmony 数据标准化处理的检查与调试
+# Harmony
 harmony = hm.run_harmony(d, meta_data=df, vars_use=["dataset"])
 harmony_corrected = harmony.Z_corr.T
 
@@ -289,7 +287,6 @@ for i in range(len(filtered_mtx)):
 
 
 
-# 检查并输出各个数组的形状
 d = np.load("../GSE245620/data/filtered_expression_matrices/1/heg_matrix.npy")
 print(d.shape, np.isnan(d).any())
 
@@ -307,13 +304,12 @@ d = np.concatenate((d.T, d2.T, d3.T, d4.T), axis = 0)
 
 
 
-# 准备相关数据及运行 Harmony
 data_sizes = [4992, 4992, 4992, 4992]
 batch_labels = np.concatenate((np.zeros(4992), np.ones(4992), np.ones(4992)*2, np.ones(4992)*3))
 batch_labels = batch_labels.astype(str)
 df = pd.DataFrame(batch_labels, columns=["dataset"])
 
-# 进行 Harmony 数据标准化处理的检查与调试
+# Harmony
 harmony = hm.run_harmony(d, meta_data=df, vars_use=["dataset"])
 harmony_corrected = harmony.Z_corr.T
 
