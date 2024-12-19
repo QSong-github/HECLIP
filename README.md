@@ -11,25 +11,44 @@ HECLIP is an innovative CLIP-based model designed to predict gene expression dir
 ![The flowchart.](./he_00.png)
 
 
-# 项目目录结构
+# Directory Structure
 
-以下是项目的目录结构：
 
 ```plaintext
-project_root/
+HECLIP-main/
 ├── README.md
-├── requirements.txt
+├── he_00.png
 ├── environment.yaml
-├── src/
-│   ├── main.py
-│   ├── utils.py
-│   └── __init__.py
-├── tests/
-│   ├── test_main.py
-│   └── test_utils.py
-└── data/
-    ├── raw_data.csv
-    └── processed_data.csv
+├── code/
+    ├── main.py
+    ├── utils.py
+    ├── infer.py
+    └── ...
+├── GSE240429/
+    ├── data/
+        ├── filtered_expression_matrices/
+            ├── 1/
+                ├── barcodes.tsv
+                ├── features.tsv
+                ├── matrix.mtx
+                └── ...
+            ├── 2/
+            └── ...
+        └── tissue_pos_matrices/
+            ├── tissue_positions_list_1.csv
+            ├── tissue_positions_list_2.csv
+            └── ...
+    └── image/
+        ├── GEX_C73_A1_Merged.tiff
+        └── ...
+├── GSE245620/
+    ├── data/
+    ├── image/
+└── GSE/
+    ├── spatialLIBD_1/
+        ├── data/
+        ├── image/
+    └── spatialLIBD_2/
 ```
 
 
