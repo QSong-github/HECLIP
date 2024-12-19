@@ -1,6 +1,6 @@
 # HECLIP
 
-This code is prepared for **"HEClip: An Advanced CLIP-based model for Gene Expression Prediction from Histology Images"**.
+This code is prepared for **"HECLIP: An Advanced CLIP-based model for Gene Expression Prediction from Histology Images"**.
 
 ## Overview
 
