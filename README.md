@@ -95,7 +95,7 @@ Install Environment:
        * [spatialLIBD_1](https://research.libd.org/spatialLIBD/)
        * [spatialLIBD_2](https://research.libd.org/spatialLIBD/)
 
-   Note: For spatialLIBD_1 and spatialLIBD_2, it is necessary to run std.py to convert the h5 to mtx format. 
+   Note: For spatialLIBD_1 and spatialLIBD_2, it is necessary to run ```std.py``` to convert the h5 to mtx format. 
    (spatialLIBD_1: 151507, 151508, 151509, 151510; spatialLIBD_2: 151669, 151670, 151671, 151672, 151673, 151674, 151675, 151676)
 
 
