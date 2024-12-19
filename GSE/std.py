@@ -8,7 +8,7 @@ from scipy.sparse import csc_matrix
 
 def std_exp():
     # from h5 to mtx
-    # Please change the file_path when select different dataset.
+    # Please change these paths when select different dataset.
     file_path = './spatialLIBD_1/data/filtered_expression_matrices/3/151509_filtered_feature_bc_matrix.h5' # the h5 path   
     mtx_file_path = './spatialLIBD_1/data/filtered_expression_matrices/3/matrix.mtx'  # Matrix Market path
     barcodes_tsv_path = './spatialLIBD_1/data/filtered_expression_matrices/3/barcodes.tsv'  # barcodes TSV path
