@@ -20,6 +20,23 @@ HECLIP-main/
 ├── he_00.png
 ├── environment.yaml
 ├── code/
+    ├── ebd/
+        ├── GSE240429/
+            ├── heg/
+            └── hvg/
+        ├── GSE245620/
+        ├── spatialLIBD_1/
+        └── spatialLIBD_2/
+    ├── figure/
+        ├── EBD/
+        └── EXP/
+    ├── save/
+        ├── GSE240429/
+            ├── hvg_best.pt
+            └── heg_best.pt
+        ├── GSE245620/
+        ├── spatialLIBD_1/
+        └── spatialLIBD_2/
     ├── main.py
     ├── utils.py
     ├── infer.py
@@ -43,12 +60,14 @@ HECLIP-main/
         └── ...
 ├── GSE245620/
     ├── data/
-    ├── image/
+    └── image/
 └── GSE/
     ├── spatialLIBD_1/
         ├── data/
-        ├── image/
+        └── image/
     └── spatialLIBD_2/
+        ├── data/
+        └── image/
 ```
 
 
@@ -57,32 +76,36 @@ HECLIP-main/
 
 
 ## Installation
-Download HEClip:
-```git clone https://github.com/wq2581/HEClip```
+Download HECLIP:
+```git clone https://github.com/QSong-github/HECLIP```
 
 Install Environment:
-```pip install -r requirements.txt``` or ```conda env create -f environment.yaml```
+```conda env create -f environment.yaml```
 
 
 ## Running
 
-### Train the HEClip.
+### Prepare data.
 
    
-   (1) download the GSE240429_data data.
+   (1) download the data.
+       * [GSE240429](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE240429)
+       * [GSE245620](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE245620)
+       * [spatialLIBD_1](https://research.libd.org/spatialLIBD/)
+       * [spatialLIBD_2](https://research.libd.org/spatialLIBD/)
+
+   Note: For spatialLIBD_1 and spatialLIBD_2, it is necessary to run std.py to convert the h5 to mtx format.
+
+
+   (2) preprocess the data.
    ```bash
-   $ cd /path/to/GSE240429_data
-   $ gdown --folder https://drive.google.com/drive/folders/1zssdBgGyzy3Jl9ISdWd1pEZKVhf1VRGz
+   $ cd /path/to/code
+   $ python preprocess_GSE240429.py
+   $ python preprocess_GSE245620.py
+   $ python preprocess_spatialLIBD_1.py
+   $ python preprocess_spatialLIBD_2.py
    ```
-   
-   (2) download the image data.
-   ```bash
-   $ cd /path/to/image
-   $ wget -O GSM7697868_GEX_C73_A1_Merged.tiff.gz "https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSM7697868&format=file&file=GSM7697868%5FGEX%5FC73%5FA1%5FMerged%2Etiff%2Egz"
-   $ wget -O GSM7697869_GEX_C73_B1_Merged.tiff.gz "https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSM7697869&format=file&file=GSM7697869%5FGEX%5FC73%5FB1%5FMerged%2Etiff%2Egz"
-   $ wget -O GSM7697871_GEX_C73_D1_Merged.tiff.gz "https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSM7697871&format=file&file=GSM7697871%5FGEX%5FC73%5FD1%5FMerged%2Etiff%2Egz"
-   $ wget -O GSM7697870_GEX_C73_C1_Merged.tiff.gz "https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSM7697870&format=file&file=GSM7697870%5FGEX%5FC73%5FC1%5FMerged%2Etiff%2Egz"
-   ```
+### Train the HECLIP.
 
    (3) Train the model.
    ```bash
@@ -102,5 +125,5 @@ Install Environment:
 
 ## Quick start
 
-If you want to use our model, you can download the pre-trained HEClip model from [here](https://drive.google.com/file/d/14RwK9U2LmgwM6YXHK9INy5UD1MbEmy1F/view?usp=drive_link) and quickly try it by the 'infer.py.'
+If you want to skip the training, you can download the pre-trained HECLIP model from [here](https://drive.google.com/file/d/1q1MYoICLeY7w30CuT2eBxGw0kiHESMgK/view?usp=drive_link) and quickly try it by the 'infer.py.'
    
