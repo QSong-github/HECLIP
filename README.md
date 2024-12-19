@@ -1,6 +1,14 @@
 # HECLIP
 
+This code is prepared for **"HEClip: An Advanced CLIP-based model for Gene Expression Prediction from Histology Images"**.
 
+## Overview
+
+### Abstract
+HECLIP is an innovative CLIP-based model designed to predict gene expression directly from histological images, addressing the challenges of accuracy and complexity faced by traditional methods. Histological images play a crucial role in medical diagnosis and research, but matching them with corresponding gene expression profiles is often time-consuming and costly. While various machine learning approaches have been proposed to tackle this issue, they often struggle with accuracy and involve complex workflows, limiting their effectiveness in predicting gene expression from image data. HECLIP leverages contrastive learning and single-modality-centric loss functions to optimize the image encoder, enhancing the predictive power of the image modality while reducing reliance on the gene modality. Unlike traditional methods, HECLIP employs image-based data augmentation strategies and achieves state-of-the-art performance across multiple benchmarks. Evaluations on four public dataset demonstrate HECLIP's superior performance in predicting highly expressed genes, achieving high correlation, hit rates, and stable cross-cell predictions. Our code are available at https://github.com/QSong-github/HECLIP.
+
+
+![The flowchart.](./heclip_00.png)
 
 
 # 项目目录结构
@@ -22,19 +30,12 @@ project_root/
 └── data/
     ├── raw_data.csv
     └── processed_data.csv
-
-# HEClip
-
-
-This code is prepared for **"HEClip: An Advanced CLIP-like  model for Gene Expression Prediction from Histology Images"**.
-
-## Overview
-
-### Abstract
-HEClip is an innovative CLIP-based model designed to predict gene expression directly from histological images, addressing the challenges of accuracy and complexity faced by traditional methods. Histological images play a crucial role in medical diagnosis and research, but matching them with corresponding gene expression profiles is often time-consuming and costly. While various machine learning approaches have been proposed to tackle this issue, they often struggle with accuracy and involve complex workflows, limiting their effectiveness in predicting gene expression from image data. HEClip leverages contrastive learning and single-modality-centered loss functions to optimize the image encoder, enhancing the predictive power of the image modality while reducing reliance on the gene modality. Unlike traditional methods, HEClip employs image-based data augmentation strategies and achieves state-of-the-art performance across multiple benchmarks. Evaluations on the GSE240429 liver dataset demonstrate HEClip's strong performance in predicting highly expressed genes, achieving high correlation, hit rates, and stable cross-cell predictions.
+```
 
 
-![The flowchart.](./heclip_00.png)
+
+
+
 
 ## Installation
 Download HEClip:
