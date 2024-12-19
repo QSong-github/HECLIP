@@ -126,4 +126,47 @@ Install Environment:
 ## Quick start
 
 If you want to skip the training, you can download the pre-trained HECLIP model from [here](https://drive.google.com/file/d/1q1MYoICLeY7w30CuT2eBxGw0kiHESMgK/view?usp=drive_link) and quickly try it by the 'infer.py.'
+
+## Reference
+
+@article{xie2024spatially,
+  title={Spatially Resolved Gene Expression Prediction from Histology Images via Bi-modal Contrastive Learning},
+  author={Xie, Ronald and Pang, Kuan and Chung, Sai and Perciani, Catia and MacParland, Sonya and Wang, Bo and Bader, Gary},
+  journal={Advances in Neural Information Processing Systems},
+  volume={36},
+  year={2024}
+}
+
+@article{li2022benchmarking,
+  title={Benchmarking spatial and single-cell transcriptomics integration methods for transcript distribution prediction and cell type deconvolution},
+  author={Li, Bin and Zhang, Wen and Guo, Chuang and Xu, Hao and Li, Longfei and Fang, Minghao and Hu, Yinlei and Zhang, Xinye and Yao, Xinfeng and Tang, Meifang and others},
+  journal={Nature methods},
+  volume={19},
+  number={6},
+  pages={662--670},
+  year={2022},
+  publisher={Nature Publishing Group US New York}
+}
+
+@article{andrews2024single,
+  title={Single-cell, single-nucleus, and spatial transcriptomics characterization of the immunological landscape in the healthy and PSC human liver},
+  author={Andrews, Tallulah S and Nakib, Diana and Perciani, Catia T and Ma, Xue Zhong and Liu, Lewis and Winter, Erin and Camat, Damra and Chung, Sai W and Lumanto, Patricia and Manuel, Justin and others},
+  journal={Journal of Hepatology},
+  volume={80},
+  number={5},
+  pages={730--743},
+  year={2024},
+  publisher={Elsevier}
+}
+
+@article{maynard2021transcriptome,
+  title={Transcriptome-scale spatial gene expression in the human dorsolateral prefrontal cortex},
+  author={Maynard, Kristen R and Collado-Torres, Leonardo and Weber, Lukas M and Uytingco, Cedric and Barry, Brianna K and Williams, Stephen R and Catallini, Joseph L and Tran, Matthew N and Besich, Zachary and Tippani, Madhavi and others},
+  journal={Nature neuroscience},
+  volume={24},
+  number={3},
+  pages={425--436},
+  year={2021},
+  publisher={Nature Publishing Group US New York}
+}
    
