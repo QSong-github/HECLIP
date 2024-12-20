@@ -89,7 +89,7 @@ Install Environment:
 ### Prepare data.
 
    
-   (1) download the data.
+   (1) Download the data.
        * [GSE240429](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE240429)
        * [GSE245620](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE245620)
        * [spatialLIBD_1](https://research.libd.org/spatialLIBD/)
@@ -99,9 +99,9 @@ Install Environment:
    (spatialLIBD_1: 151507, 151508, 151509, 151510; spatialLIBD_2: 151669, 151670, 151671, 151672, 151673, 151674, 151675, 151676)
 
 
-   (2) preprocess the data.
+   (2) Preprocess the data.
    ```bash
-   $ cd /path/to/code
+   $ cd /path/to/code/
    $ python preprocess_GSE240429.py
    $ python preprocess_GSE245620.py
    $ python preprocess_spatialLIBD_1.py
@@ -111,7 +111,7 @@ Install Environment:
 
    (3) Train the model.
    ```bash
-   $ cd /path/to/main.py
+   $ cd /path/to/code/
    $ python main.py
    ```
    
@@ -119,7 +119,7 @@ Install Environment:
 
    (4) Inference.
    ```bash
-   $ cd /path/to/infer.py
+   $ cd /path/to/code/
    $ python infer.py
    ```
 
@@ -127,7 +127,7 @@ Install Environment:
 
 ## Quick start
 
-If you want to skip the training, you can download the pre-trained HECLIP model from [here](https://drive.google.com/file/d/1q1MYoICLeY7w30CuT2eBxGw0kiHESMgK/view?usp=drive_link) and quickly try it by the 'infer.py.'
+If you want to skip the training, you can download the pre-trained HECLIP model from [here](https://drive.google.com/file/d/1q1MYoICLeY7w30CuT2eBxGw0kiHESMgK/view?usp=drive_link) and quickly try it by the ```'infer.py.'```
 
 ## Reference
 
