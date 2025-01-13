@@ -8,7 +8,6 @@ This code is prepared for "HECLIP: Histology-Enhanced Contrastive Learning for I
 ```plaintext
 HECLIP-main/
 ├── README.md
-├── he_00.png
 ├── environment.yaml
 ├── code/
     ├── ebd/
@@ -62,11 +61,6 @@ HECLIP-main/
         └── image/
 ```
 
-
-
-
-
-
 ## Installation
 Download HECLIP:
 ```git clone https://github.com/QSong-github/HECLIP```
@@ -113,7 +107,6 @@ Install Environment:
    $ cd /path/to/code/
    $ python infer.py
    ```
-
 
 
 ## Quick start
